@@ -12,10 +12,10 @@ O **FinanParceiro** acompanha o seu dia a dia, organiza seus cartões, simula o 
 
 Diferente de sistemas tradicionais onde você apenas "joga dados", aqui a IA lê o seu contexto e ajuda a tomar decisões. 
 
-- ** A IA que te Conhece:** Pergunte ao chat integrado: *"Consigo trocar de carro mês que vem?"* ou *"Quanto preciso guardar para viajar em dezembro?"*. O Gemini analisa seus gastos e receitas na hora e te dá a resposta.
-- ** Domínio sobre os Cartões:** Chega de surpresas no fim do mês. Lance compras parceladas, adiante faturas e acompanhe seus limites em tempo real.
-- ** O "Cofre" Inteligente:** Defina metas (ex: Reserva de Emergência) e veja o app simular o crescimento do seu dinheiro com juros compostos em aplicações CDI ou Fixas.
-- ** Visão de Raio-X:** Dashboard limpo e intuitivo para entender seu patrimônio líquido, fluxo de caixa e pendências em questão de segundos.
+- **A IA que te Conhece:** Pergunte ao chat integrado: *"Consigo trocar de carro mês que vem?"* ou *"Quanto preciso guardar para viajar em dezembro?"*. O Gemini analisa seus gastos e receitas na hora e te dá a resposta.
+- **Domínio sobre os Cartões:** Chega de surpresas no fim do mês. Lance compras parceladas, adiante faturas e acompanhe seus limites em tempo real.
+- **O "Cofre" Inteligente:** Defina metas (ex: Reserva de Emergência) e veja o app simular o crescimento do seu dinheiro com juros compostos em aplicações CDI ou Fixas.
+- **Visão de Raio-X:** Dashboard limpo e intuitivo para entender seu patrimônio líquido, fluxo de caixa e pendências em questão de segundos.
 
 ---
 
