@@ -1,29 +1,43 @@
-# FinanParceiro - Agente Financeiro Inteligente
+# 💰 FinanParceiro - Seu Agente Financeiro Pessoal Inteligente
 
-O **FinanParceiro** é uma aplicação completa de gestão financeira pessoal integrada a um **Agente Inteligente**. Ele não apenas acompanha suas finanças, mas atua como um parceiro e conselheiro graças à inteligência artificial avançada.
+[![Tecnologias](https://img.shields.io/badge/Stack-JavaScript%20%7C%20Tailwind%20%7C%20Firebase-blue)](#)
+[![IA](https://img.shields.io/badge/Powered%20by-Google%20Gemini-orange)](#)
 
-## Principais Funcionalidades
+*Esqueça planilhas complexas e aplicativos confusos. O FinanParceiro é mais do que um gestor de despesas: é um conselheiro financeiro de bolso guiado por Inteligência Artificial.*
 
-- **Dashboard Integrado:** Visão clara do seu patrimônio líquido, despesas, faturas pagas e pendentes.
-- **Gestão de Cartões de Crédito:** Lançamento de compras parceladas, visualização da fatura por mês/ano, adiantamento de faturas e acompanhamento de limites.
-- **Cofre (Metas e Aportes):** Criação de metas financeiras (ex: Reserva de Emergência, Aposentadoria) com cálculos de rendimentos (CDI, Fixo) e simulação de juros compostos.
-- **Fluxo de Caixa Mensal:** Monitoramento das transações correntes (entrada/saída).
-- **Integração com IA (Gemini):** O Assistente sabe todo o seu contexto financeiro e responde perguntas complexas (ex: "Consigo comprar um carro mês que vem?").
+O **FinanParceiro** acompanha o seu dia a dia, organiza seus cartões, simula o futuro dos seus investimentos e, o mais importante, **conversa com você** para responder perguntas complexas sobre a sua própria realidade financeira.
 
-## Arquitetura e Tecnologias
+> 📸 *Dica: Substitua este aviso por uma captura de tela (Screenshot) ou GIF animado do Dashboard do seu aplicativo para causar mais impacto visual.*
+
+---
+
+## ✨ Por que o FinanParceiro é diferente?
+
+Diferente de sistemas tradicionais onde você apenas "joga dados", aqui a IA lê o seu contexto e ajuda a tomar decisões. 
+
+- **🧠 A IA que te Conhece:** Pergunte ao chat integrado: *"Consigo trocar de carro mês que vem?"* ou *"Quanto preciso guardar para viajar em dezembro?"*. O Gemini analisa seus gastos e receitas na hora e te dá a resposta.
+- **💳 Domínio sobre os Cartões:** Chega de surpresas no fim do mês. Lance compras parceladas, adiante faturas e acompanhe seus limites em tempo real.
+- **🏦 O "Cofre" Inteligente:** Defina metas (ex: Reserva de Emergência) e veja o app simular o crescimento do seu dinheiro com juros compostos em aplicações CDI ou Fixas.
+- **📊 Visão de Raio-X:** Dashboard limpo e intuitivo para entender seu patrimônio líquido, fluxo de caixa e pendências em questão de segundos.
+
+---
+
+## 🛠️ Por Trás dos Panos (Tecnologia & Arquitetura)
 
 - **Frontend:** HTML, JavaScript Vanilla e Tailwind CSS (através do Vite) focando em alta performance e reatividade via Proxies locais (`src/store.js`). PWA configurado (aplicativo instalável).
 - **Backend (Serverless):** Firebase Cloud Functions (Node.js) para processamento seguro da Inteligência Artificial.
 - **Banco de Dados:** Firestore (Firebase) para persistência em nuvem.
 - **IA:** Integração nativa com a API do Google Gemini via `@google/genai`.
 
-## Segurança em Primeiro Lugar
+## 🔒 Segurança em Primeiro Lugar
 
 O projeto utiliza **Variáveis de Ambiente** no Frontend e no Backend. Nenhuma chave secreta está embutida diretamente no código fonte. 
 
 A arquitetura usa o `tc_auth_token` e faz hash de senha via Web Crypto API de forma nativa no navegador (sem dependências externas) antes de comparar com o hash no ambiente (`import.meta.env.VITE_ADMIN_HASH`).
 
-## Como Rodar Localmente
+---
+
+## 💻 Como Rodar Localmente
 
 ### 1. Pré-requisitos
 - Node.js (v18+)
@@ -74,7 +88,5 @@ npm run build
 firebase deploy --only functions,hosting
 ```
 
-## Considerações Finais e Disclaimer
+## ⚠️ Considerações Finais e Disclaimer
 Este software é um modelo de arquitetura. É **fortemente recomendado** que você garanta a correta configuração das Regras de Segurança do seu Firestore (`firestore.rules`) para evitar que dados sejam lidos publicamente. O arquivo `auth.js` provê uma camada de proteção UI, mas as regras de banco precisam restringir acessos não autorizados via API.
-
----
