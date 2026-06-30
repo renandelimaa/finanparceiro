@@ -6,30 +6,27 @@
 *Esqueça planilhas complexas e aplicativos confusos. O FinanParceiro é mais do que um gestor de despesas: é um conselheiro financeiro de bolso guiado por Inteligência Artificial.*
 
 O **FinanParceiro** acompanha o seu dia a dia, organiza seus cartões, simula o futuro dos seus investimentos e, o mais importante, **conversa com você** para responder perguntas complexas sobre a sua própria realidade financeira.
-
-> 📸 *Dica: Substitua este aviso por uma captura de tela (Screenshot) ou GIF animado do Dashboard do seu aplicativo para causar mais impacto visual.*
-
 ---
 
 ## ✨ Por que o FinanParceiro é diferente?
 
 Diferente de sistemas tradicionais onde você apenas "joga dados", aqui a IA lê o seu contexto e ajuda a tomar decisões. 
 
-- **🧠 A IA que te Conhece:** Pergunte ao chat integrado: *"Consigo trocar de carro mês que vem?"* ou *"Quanto preciso guardar para viajar em dezembro?"*. O Gemini analisa seus gastos e receitas na hora e te dá a resposta.
-- **💳 Domínio sobre os Cartões:** Chega de surpresas no fim do mês. Lance compras parceladas, adiante faturas e acompanhe seus limites em tempo real.
-- **🏦 O "Cofre" Inteligente:** Defina metas (ex: Reserva de Emergência) e veja o app simular o crescimento do seu dinheiro com juros compostos em aplicações CDI ou Fixas.
-- **📊 Visão de Raio-X:** Dashboard limpo e intuitivo para entender seu patrimônio líquido, fluxo de caixa e pendências em questão de segundos.
+- ** A IA que te Conhece:** Pergunte ao chat integrado: *"Consigo trocar de carro mês que vem?"* ou *"Quanto preciso guardar para viajar em dezembro?"*. O Gemini analisa seus gastos e receitas na hora e te dá a resposta.
+- ** Domínio sobre os Cartões:** Chega de surpresas no fim do mês. Lance compras parceladas, adiante faturas e acompanhe seus limites em tempo real.
+- ** O "Cofre" Inteligente:** Defina metas (ex: Reserva de Emergência) e veja o app simular o crescimento do seu dinheiro com juros compostos em aplicações CDI ou Fixas.
+- ** Visão de Raio-X:** Dashboard limpo e intuitivo para entender seu patrimônio líquido, fluxo de caixa e pendências em questão de segundos.
 
 ---
 
-## 🛠️ Por Trás dos Panos (Tecnologia & Arquitetura)
+##  Por Trás dos Panos (Tecnologia & Arquitetura)
 
 - **Frontend:** HTML, JavaScript Vanilla e Tailwind CSS (através do Vite) focando em alta performance e reatividade via Proxies locais (`src/store.js`). PWA configurado (aplicativo instalável).
 - **Backend (Serverless):** Firebase Cloud Functions (Node.js) para processamento seguro da Inteligência Artificial.
 - **Banco de Dados:** Firestore (Firebase) para persistência em nuvem.
 - **IA:** Integração nativa com a API do Google Gemini via `@google/genai`.
 
-## 🔒 Segurança em Primeiro Lugar
+##  Segurança em Primeiro Lugar
 
 O projeto utiliza **Variáveis de Ambiente** no Frontend e no Backend. Nenhuma chave secreta está embutida diretamente no código fonte. 
 
@@ -37,7 +34,7 @@ A arquitetura usa o `tc_auth_token` e faz hash de senha via Web Crypto API de fo
 
 ---
 
-## 💻 Como Rodar Localmente
+##  Como Rodar Localmente
 
 ### 1. Pré-requisitos
 - Node.js (v18+)
