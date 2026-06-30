@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en" class="overscroll-none">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
+    <meta name="apple-mobile-web-app-title" content="Finanparceiro">
+    <link rel="apple-touch-icon" href="/icon.png">
+    <link rel="icon" type="image/png" href="/icon.png">
+    <link rel="manifest" href="/manifest.json">
+    <title>Finanparceiro - App</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+        rel="stylesheet" />
+
+    <!-- Configuração do Tailwind com o Design System definido -->
+    <script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface": "#fcf9f8",
+                        "surface-dim": "#dcd9d9",
+                        "surface-bright": "#fcf9f8",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-container": "#f0eded",
+                        "surface-container-high": "#eae7e7",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-surface": "#1b1b1c",
+                        "on-surface-variant": "#434749",
+                        "inverse-surface": "#313030",
+                        "inverse-on-surface": "#f3f0ef",
+                        "outline": "#747879",
+                        "outline-variant": "#c3c7c8",
+                        "surface-tint": "#586062",
+                        "primary": "#181f21",
+                        "on-primary": "#ffffff",
+                        "primary-container": "#2d3436",
+                        "on-primary-container": "#959c9f",
+                        "inverse-primary": "#c1c8ca",
+                        "secondary": "#625e57",
+                        "on-secondary": "#ffffff",
+                        "secondary-container": "#e5dfd6",
+                        "on-secondary-container": "#66625b",
+                        "tertiary": "#2d1912",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-container": "#452d25",
+                        "on-tertiary-container": "#b69489",
+                        "error": "#ba1a1a",
+                        "on-error": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "primary-fixed": "#CDE8D2",
+                        "primary-fixed-dim": "#A3D9AE",
+                        "on-primary-fixed": "#161d1f",
+                        "on-primary-fixed-variant": "#2E4F36",
+                        "secondary-fixed": "#e8e1d9",
+                        "secondary-fixed-dim": "#ccc6bd",
+                        "on-secondary-fixed": "#1e1b16",
+                        "on-secondary-fixed-variant": "#4a4640",
+                        "tertiary-fixed": "#ffdbd0",
+                        "tertiary-fixed-dim": "#e4beb3",
+                        "on-tertiary-fixed": "#2b160f",
+                        "on-tertiary-fixed-variant": "#5b4138",
+                        "background": "#fcf9f8",
+                        "on-background": "#1b1b1c",
+                        "surface-variant": "#e5e2e1",
+                        "light-sand": "#F4EDE4",
+                        "nubank-pastel": "#CAB8F8",
+                        "mercadopago-pastel": "#A2D2F2"
+                    },
+                    borderRadius: {
+                        "sm": "0.25rem",
+                        "DEFAULT": "0.5rem",
+                        "md": "0.75rem",
+                        "lg": "1rem",
+                        "xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "unit": "8px",
+                        "container-padding-mobile": "24px",
+                        "gutter": "16px",
+                        "stack-md": "24px",
+                        "stack-sm": "8px",
+                        "container-padding-desktop": "48px",
+                        "stack-lg": "48px",
+                        "safe": "env(safe-area-inset-bottom)"
+                    },
+                    fontFamily: {
+                        "body-lg": ["Inter", "sans-serif"],
+                        "body-sm": ["Inter", "sans-serif"],
+                        "display-balance": ["Inter", "sans-serif"],
+                        "label-caps": ["Inter", "sans-serif"],
+                        "display-balance-mobile": ["Inter", "sans-serif"],
+                        "headline-md": ["Inter", "sans-serif"]
+                    },
+                    fontSize: {
+                        "body-lg": ["17px", { lineHeight: "26px", fontWeight: "400" }],
+                        "body-sm": ["14px", { lineHeight: "20px", fontWeight: "400" }],
+                        "display-balance": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "200" }],
+                        "label-caps": ["12px", { lineHeight: "16px", letterSpacing: "0.08em", fontWeight: "700" }],
+                        "display-balance-mobile": ["36px", { lineHeight: "42px", letterSpacing: "-0.02em", fontWeight: "200" }],
+                        "headline-md": ["24px", { lineHeight: "32px", letterSpacing: "-0.01em", fontWeight: "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        * {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        .material-symbols-outlined.fill {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+
+        body {
+            min-height: 100vh;
+            min-height: 100dvh;
+            background-color: #fcf9f8;
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+
+<body class="bg-surface text-on-surface font-body-lg antialiased mx-auto max-w-md relative shadow-xl overflow-hidden h-[100dvh] flex flex-col overscroll-none touch-manipulation">
+    <!-- Blocker para Desktop -->
+    <div class="fixed inset-0 z-[99999] w-screen h-screen bg-surface flex-col items-center justify-center p-8 text-center hidden lg:flex">
+        <div class="absolute inset-0 pointer-events-none overflow-hidden z-[-1] w-full h-full">
+            <div class="absolute top-[10%] left-[20%] w-[40%] h-[40%] rounded-full bg-primary-container/20 blur-[120px]"></div>
+            <div class="absolute bottom-[10%] right-[20%] w-[40%] h-[40%] rounded-full bg-tertiary-container/20 blur-[120px]"></div>
+        </div>
+        
+        <div class="w-28 h-28 mb-8 rounded-full bg-surface-container-highest border border-outline-variant/30 flex items-center justify-center shadow-lg relative">
+            <span class="material-symbols-outlined text-[48px] text-primary animate-[pulse_2s_infinite]">smartphone</span>
+            <div class="absolute -bottom-2 -right-2 w-10 h-10 bg-error-container rounded-full flex items-center justify-center border-4 border-surface shadow-sm">
+                <span class="material-symbols-outlined text-[20px] text-error">block</span>
+            </div>
+        </div>
+        
+        <h1 class="font-display-balance text-[40px] leading-tight text-primary mb-4 max-w-xl">Experiência Exclusiva<br/>para Mobile</h1>
+        <p class="font-body-lg text-on-surface-variant max-w-md mx-auto leading-relaxed text-[16px]">
+            Por ser um aplicativo mobile, você não pode acessar por esse dispositivo. Tente novamente em um smartphone ou tablet.
+        </p>
+    </div>
+
+    <!-- Background Elements (Sutis) -->
+    <div class="fixed inset-0 pointer-events-none overflow-hidden z-[-1] max-w-md mx-auto">
+        <div class="absolute top-[-5%] left-[-10%] w-[50%] h-[40%] rounded-full bg-primary-container/20 blur-[80px]"></div>
+        <div class="absolute bottom-[20%] right-[-10%] w-[50%] h-[40%] rounded-full bg-tertiary-container/20 blur-[80px]"></div>
+    </div>
+
+    <div id="app-view" class="w-full h-full flex-1 overflow-y-auto overscroll-y-contain no-scrollbar scroll-smooth"></div>
+
+    <!-- BottomNavBar -->
+    <nav id="bottom-nav"
+        class="hidden fixed bottom-0 w-full max-w-md z-50 rounded-t-2xl bg-surface/80 backdrop-blur-2xl shadow-[0_-4px_24px_rgba(0,0,0,0.04)] justify-around items-center px-4 pb-8 pt-4 border-t border-outline-variant/20 left-1/2 -translate-x-1/2 transition-all duration-150">
+        <a href="#corrente"
+            class="flex flex-col items-center justify-center text-primary font-bold tap-highlight-none active:scale-95 transition-all duration-150 group">
+            <span class="material-symbols-outlined fill text-[24px] mb-1">home_app_logo</span>
+            <span class="font-label-caps text-label-caps text-[10px]">Corrente</span>
+        </a>
+        <a href="#cofre"
+            class="flex flex-col items-center justify-center text-on-surface-variant/60 hover:text-primary transition-colors tap-highlight-none active:scale-90 transition-all duration-150 group">
+            <span
+                class="material-symbols-outlined text-[24px] mb-1 group-hover:opacity-80">account_balance_wallet</span>
+            <span class="font-label-caps text-label-caps text-[10px]">Cofre</span>
+        </a>
+        <a href="#fluxo"
+            class="flex flex-col items-center justify-center text-on-surface-variant/60 hover:text-primary transition-colors tap-highlight-none active:scale-90 transition-all duration-150 group">
+            <span class="material-symbols-outlined text-[24px] mb-1 group-hover:opacity-80">receipt_long</span>
+            <span class="font-label-caps text-label-caps text-[10px]">Fluxo</span>
+        </a>
+        <a href="#analises"
+            class="flex flex-col items-center justify-center text-on-surface-variant/60 hover:text-primary transition-colors tap-highlight-none active:scale-90 transition-all duration-150 group">
+            <span class="material-symbols-outlined text-[24px] mb-1 group-hover:opacity-80">analytics</span>
+            <span class="font-label-caps text-label-caps text-[10px]">Parceiro</span>
+        </a>
+    </nav>
+
+    <script type="module" src="/src/app.js"></script>
+</body>
+
+</html>

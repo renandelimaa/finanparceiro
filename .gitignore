@@ -1,0 +1,17 @@
+node_modules
+.env
+.env.*
+!.env.example
+dist/
+.firebase/
+scratch/
+test_*.cjs
+refactor.cjs
+firebase-debug.log
+firestore-debug.log
+functions/node_modules
+functions/.env
+functions/.env.*
+!functions/.env.example
+functions/agentPrompt.js
+firestore.rules

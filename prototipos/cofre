@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Vault - Financial Refuge</title>
+<!-- Google Fonts & Material Symbols -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration (Design System) -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "surface-variant": "#e5e2e1",
+                    "surface": "#fcf9f8",
+                    "on-tertiary-fixed-variant": "#5b4138",
+                    "on-secondary-container": "#66625b",
+                    "tertiary-container": "#452d25",
+                    "on-surface-variant": "#434749",
+                    "on-secondary-fixed": "#1e1b16",
+                    "on-secondary-fixed-variant": "#4a4640",
+                    "outline-variant": "#c3c7c8",
+                    "outline": "#747879",
+                    "on-tertiary-container": "#b69489",
+                    "on-surface": "#1b1b1c",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#313030",
+                    "surface-bright": "#fcf9f8",
+                    "surface-container-highest": "#e5e2e1",
+                    "on-secondary": "#ffffff",
+                    "secondary-container": "#e5dfd6",
+                    "secondary": "#625e57",
+                    "surface-container-low": "#f6f3f2",
+                    "tertiary": "#2d1912",
+                    "inverse-on-surface": "#f3f0ef",
+                    "on-tertiary-fixed": "#2b160f",
+                    "on-primary-fixed-variant": "#41484a",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#e4beb3",
+                    "on-background": "#1b1b1c",
+                    "surface-dim": "#dcd9d9",
+                    "surface-container": "#f0eded",
+                    "on-error-container": "#93000a",
+                    "surface-tint": "#586062",
+                    "on-primary-fixed": "#161d1f",
+                    "on-primary-container": "#959c9f",
+                    "error-container": "#ffdad6",
+                    "surface-container-high": "#eae7e7",
+                    "background": "#fcf9f8",
+                    "secondary-fixed": "#e8e1d9",
+                    "primary-fixed-dim": "#c1c8ca",
+                    "inverse-primary": "#c1c8ca",
+                    "primary-container": "#2d3436",
+                    "surface-container-lowest": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "tertiary-fixed": "#ffdbd0",
+                    "secondary-fixed-dim": "#ccc6bd",
+                    "primary-fixed": "#dde4e6",
+                    "primary": "#181f21"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "stack-md": "24px",
+                    "container-padding-desktop": "48px",
+                    "container-padding-mobile": "24px",
+                    "stack-sm": "8px",
+                    "stack-lg": "48px",
+                    "unit": "8px",
+                    "gutter": "16px"
+            },
+            "fontFamily": {
+                    "body-sm": ["Inter"],
+                    "headline-md": ["Inter"],
+                    "display-balance-mobile": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-balance": ["Inter"],
+                    "label-caps": ["Inter"]
+            },
+            "fontSize": {
+                    "body-sm": ["14px", {"lineHeight": "20px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "500"}],
+                    "display-balance-mobile": ["36px", {"lineHeight": "42px", "letterSpacing": "-0.02em", "fontWeight": "200"}],
+                    "body-lg": ["17px", {"lineHeight": "26px", "fontWeight": "400"}],
+                    "display-balance": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "200"}],
+                    "label-caps": ["12px", {"lineHeight": "16px", "letterSpacing": "0.08em", "fontWeight": "700"}]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .icon-fill {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Hide scrollbar for clean aesthetic */
+        ::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface text-on-surface font-body-sm antialiased min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface/60 backdrop-blur-3xl border-b border-outline-variant/10 flex justify-between items-center px-container-padding-mobile md:px-container-padding-desktop h-16 shadow-none">
+<!-- Leading: Avatar -->
+<div class="flex-shrink-0 w-8 h-8 rounded-full overflow-hidden bg-surface-variant border border-outline-variant/20">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="A close-up, high-fashion editorial portrait of an individual, lit with soft, diffused natural light. The styling is minimalist and sophisticated, utilizing a neutral color palette of off-whites and muted taupes to match a high-end, calm financial app aesthetic. The background is a pure, bright off-white." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBzgz1R66fOYKM3txVl69TUyMYwW9Jq7VoTZw9j40loW2CVTa5pGwhizT-DfyxYQ6WoXsUVCPKi8_MPGlbuarqvLcb5suwzFooEs5XsvcV25GM7cczYfPcVeS8nM95pU1RGZEUbaTqCwqvVqK_anc6a_wUNeljudjSglYCxb0tYI-Klo3ONEFPyeEEg-TfbKblOVsXoXVQFH0ni66CenD1j-9BeWIBTaGawgits5BXCHfcDe2A55QKkJA"/>
+</div>
+<!-- Desktop Navigation Cluster (Hidden on Mobile) -->
+<nav class="hidden md:flex gap-8 items-center absolute left-1/2 -translate-x-1/2"><a class="font-label-caps text-label-caps text-secondary hover:opacity-70 transition-opacity active:scale-95 duration-200" href="#">Refúgio</a>
+<a class="font-label-caps text-label-caps text-primary font-bold active:scale-95 duration-200" href="#">Cofre</a>
+<a class="font-label-caps text-label-caps text-secondary hover:opacity-70 transition-opacity active:scale-95 duration-200" href="#">Fluxo</a>
+<a class="font-label-caps text-label-caps text-secondary hover:opacity-70 transition-opacity active:scale-95 duration-200" href="#">Análises</a></nav>
+<!-- Brand / Mobile Center -->
+<div class="md:hidden font-headline-md text-headline-md font-bold text-primary">Refúgio</div>
+<!-- Trailing: Menu Icon -->
+<button aria-label="Menu" class="flex-shrink-0 text-primary hover:opacity-70 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow px-container-padding-mobile md:px-container-padding-desktop pt-32 pb-32 md:pb-24 max-w-4xl mx-auto w-full">
+<!-- Header: Balance Section -->
+<section class="mb-stack-lg animate-[fadeIn_0.5s_ease-out]">
+<p class="font-label-caps text-label-caps text-secondary uppercase mb-stack-sm tracking-widest">PATRIMÔNIO LÍQUIDO</p>
+<h1 class="font-display-balance-mobile text-display-balance-mobile md:font-display-balance md:text-display-balance text-primary font-extralight tracking-tight mb-8">
+                R$ 125.400,00
+            </h1>
+<!-- Action Button -->
+<button class="w-full md:w-auto flex items-center justify-between md:justify-start gap-4 px-6 py-5 bg-surface/40 backdrop-blur-2xl border border-outline-variant/30 rounded-xl text-primary font-body-lg hover:bg-surface-variant/30 transition-colors duration-300 group">
+<span class="font-medium text-sm md:text-base">+ Adicionar Rendimento</span>
+<span class="material-symbols-outlined text-outline group-hover:text-primary transition-colors text-xl" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</section>
+<!-- The Goal Journey -->
+<section class="animate-[fadeIn_0.7s_ease-out_0.2s_both]">
+<h2 class="font-body-lg text-body-lg text-on-surface-variant mb-12 hidden md:block">A Jornada dos Objetivos</h2>
+<div class="relative pl-6 md:pl-8">
+<!-- Continuous Vertical Path Line -->
+<div class="absolute left-[15px] md:left-[19px] top-6 bottom-8 w-[1px] bg-outline-variant/20 z-0"></div>
+<!-- Node 1: Completed -->
+<div class="relative z-10 flex gap-6 md:gap-8 mb-12 group">
+<!-- Marker -->
+<div class="relative shrink-0 w-8 h-8 rounded-full bg-secondary-container border-4 border-surface flex items-center justify-center -ml-4 shadow-[0_0_0_4px_rgba(252,249,248,1)] transition-transform duration-300 group-hover:scale-110">
+<span class="material-symbols-outlined text-tertiary-container text-sm icon-fill" data-icon="check" data-weight="fill">check</span>
+</div>
+<!-- Content Card (Bento/Glass style) -->
+<div class="flex-grow bg-surface-container-lowest border border-outline-variant/20 rounded-2xl p-6 md:p-8 hover:shadow-[0_12px_32px_rgba(0,0,0,0.04)] transition-shadow duration-300 cursor-pointer">
+<div class="flex justify-between items-start mb-4">
+<div>
+<h3 class="font-body-lg text-body-lg text-primary mb-1">Reserva de Emergência</h3>
+<p class="font-label-caps text-label-caps text-secondary">CONCLUÍDO</p>
+</div>
+<span class="font-body-lg text-body-lg text-primary">R$ 20.000,00</span>
+</div>
+<!-- Progress Gauge (Full) -->
+<div class="h-1 w-full bg-secondary-container rounded-none mt-6"></div>
+</div>
+</div>
+<!-- Node 2: In Progress -->
+<div class="relative z-10 flex gap-6 md:gap-8 group">
+<!-- Marker -->
+<div class="relative shrink-0 w-8 h-8 rounded-full bg-surface border-2 border-outline-variant flex items-center justify-center -ml-4 shadow-[0_0_0_4px_rgba(252,249,248,1)] transition-transform duration-300 group-hover:scale-110">
+<div class="w-2 h-2 rounded-full bg-primary animate-pulse"></div>
+</div>
+<!-- Content Card -->
+<div class="flex-grow bg-surface-container-low rounded-2xl p-6 md:p-8 hover:shadow-[0_12px_32px_rgba(0,0,0,0.04)] transition-shadow duration-300 cursor-pointer">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-body-lg text-body-lg text-primary mb-1">Viagem ao Japão</h3>
+<p class="font-label-caps text-label-caps text-secondary">EM ANDAMENTO</p>
+</div>
+<div class="text-right">
+<span class="font-body-lg text-body-lg text-primary block">R$ 15.400,00</span>
+<span class="font-body-sm text-body-sm text-outline">de R$ 40.000,00</span>
+</div>
+</div>
+<!-- Progress Gauge (Partial) -->
+<div class="h-1 w-full bg-surface-variant rounded-none overflow-hidden relative">
+<div class="absolute top-0 left-0 h-full bg-primary w-[38.5%] transition-all duration-1000 ease-out"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full h-20 flex justify-around items-center px-gutter pb-safe bg-surface/60 backdrop-blur-3xl border-t border-outline-variant/10 z-50"><!-- Tab: Refúgio -->
+<a class="flex flex-col items-center justify-center text-secondary hover:text-primary transition-colors active:scale-90 duration-200 w-16 group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:opacity-80 transition-opacity" data-icon="spa">spa</span>
+<span class="font-label-caps text-[10px] uppercase tracking-wider">Refúgio</span>
+</a>
+<!-- Tab: Cofre (Active) -->
+<a class="flex flex-col items-center justify-center text-primary font-bold active:scale-90 duration-200 w-16" href="#">
+<span class="material-symbols-outlined mb-1 icon-fill" data-icon="account_balance_wallet" data-weight="fill">account_balance_wallet</span>
+<span class="font-label-caps text-[10px] uppercase tracking-wider">Cofre</span>
+</a>
+<!-- Tab: Fluxo -->
+<a class="flex flex-col items-center justify-center text-secondary hover:text-primary transition-colors active:scale-90 duration-200 w-16 group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:opacity-80 transition-opacity" data-icon="swap_vert">swap_vert</span>
+<span class="font-label-caps text-[10px] uppercase tracking-wider">Fluxo</span>
+</a>
+<!-- Tab: Análises -->
+<a class="flex flex-col items-center justify-center text-secondary hover:text-primary transition-colors active:scale-90 duration-200 w-16 group" href="#">
+<span class="material-symbols-outlined mb-1 group-hover:opacity-80 transition-opacity" data-icon="insights">insights</span>
+<span class="font-label-caps text-[10px] uppercase tracking-wider">Análises</span>
+</a></nav>
+</body></html>
